@@ -2,7 +2,7 @@ import React      from 'react'
 import { Route }  from 'react-router-dom'
 import { styles } from './styles.scss'
 
-const RegistrationLayoutRoute = ({ component: Component }) => {
+const NoHeaderRoute = ({ component: Component }) => {
   return (
     <Route
       render={matchProps => (
@@ -16,4 +16,4 @@ const RegistrationLayoutRoute = ({ component: Component }) => {
   )
 }
 
-export default RegistrationLayoutRoute
+export default NoHeaderRoute
