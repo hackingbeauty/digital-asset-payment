@@ -1,8 +1,8 @@
 /* Main app configs go here */
 
 export const appConfig = {
-  name: 'Proof Of Ex',
-  shortName: 'ProofOfEx',
-  description: 'A P2P Digital Asset Marketplace For Ethereum',
+  name: 'Digital Asset Marketplace',
+  shortName: 'DigitalAssetMarketPlace',
+  description: 'A P2P Digital Asset Marketplace',
   splashScreenBackground: '#ffffff'
 }

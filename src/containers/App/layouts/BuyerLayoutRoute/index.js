@@ -16,7 +16,7 @@ const renderContent = ((props, matchProps, Component) => {
   return (<Component {...matchProps} />)
 })
 
-const NormalLayoutRoute = ({ component: Component, ...props }) => {
+const BuyerLayoutRoute = ({ component: Component, ...props }) => {
   return (
     <Route
       render={matchProps => (
@@ -32,11 +32,10 @@ const NormalLayoutRoute = ({ component: Component, ...props }) => {
   )
 }
 
-NormalLayoutRoute.propTypes = {
+BuyerLayoutRoute.propTypes = {
   component: PropTypes.func.isRequired
 }
 
-
 export default compose(
   loadingComponent()
-)(NormalLayoutRoute)
+)(BuyerLayoutRoute)

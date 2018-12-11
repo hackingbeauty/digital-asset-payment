@@ -15,8 +15,10 @@ import PendingTransactionsView      from 'containers/PendingTransactionsView'
 import LatestUploadsView            from 'containers/LatestUploadsView'
 import RegisterView                 from 'containers/RegisterView'
 import HomeView                     from 'containers/HomeView'
+import BuyView                      from 'containers/BuyView'
 import * as providerActionCreators  from 'core/actions/actions-provider'
-import NormalLayoutRoute            from './layouts/NormalLayoutRoute'
+import BuyerLayoutRoute             from './layouts/BuyerLayoutRoute'
+import SellerLayoutRoute            from './layouts/SellerLayoutRoute'
 import NoHeaderRoute                from './layouts/NoHeaderRoute'
 import MetaMaskNotification         from './components/MetaMaskNotification'
 
@@ -34,10 +36,11 @@ class App extends Component {
         <HashRouter>
           <Switch>
             <NoHeaderRoute path="/home" component={HomeView} />
-            <NormalLayoutRoute path="/assets" component={AssetsView} />
-            <NormalLayoutRoute path="/pending" component={PendingTransactionsView} />
-            <NormalLayoutRoute path="/latest" component={LatestUploadsView} />
-            <NormalLayoutRoute path="/upload" component={UploadView} />
+            <SellerLayoutRoute path="/assets" component={AssetsView} />
+            <BuyerLayoutRoute path="/buy" component={BuyView} />
+            <SellerLayoutRoute path="/pending" component={PendingTransactionsView} />
+            <SellerLayoutRoute path="/latest" component={LatestUploadsView} />
+            <SellerLayoutRoute path="/upload" component={UploadView} />
             <NoHeaderRoute path="/register" component={RegisterView} />
             <Redirect from="/" to="/home" />
           </Switch>
