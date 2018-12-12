@@ -16,6 +16,7 @@ import LatestUploadsView            from 'containers/LatestUploadsView'
 import RegisterView                 from 'containers/RegisterView'
 import HomeView                     from 'containers/HomeView'
 import BuyView                      from 'containers/BuyView'
+import ItemView                     from 'containers/ItemView'
 import * as providerActionCreators  from 'core/actions/actions-provider'
 import BuyerLayoutRoute             from './layouts/BuyerLayoutRoute'
 import SellerLayoutRoute            from './layouts/SellerLayoutRoute'
@@ -37,6 +38,7 @@ class App extends Component {
           <Switch>
             <NoHeaderRoute path="/home" component={HomeView} />
             <SellerLayoutRoute path="/assets" component={AssetsView} />
+            <BuyerLayoutRoute path="/item" component={ItemView} />
             <BuyerLayoutRoute path="/buy" component={BuyView} />
             <SellerLayoutRoute path="/pending" component={PendingTransactionsView} />
             <SellerLayoutRoute path="/latest" component={LatestUploadsView} />

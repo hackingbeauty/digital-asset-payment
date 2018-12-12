@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import GridListTile         from '@material-ui/core/GridListTile'
 import GridListTileBar      from '@material-ui/core/GridListTileBar'
 import IconButton           from '@material-ui/core/IconButton'
+import { Link }               from 'react-router-dom'
 import Button               from 'components/Button'
 import accountSvg           from 'assets/svgs/account.svg'
 import imagePlaceholderSvg  from 'assets/svgs/image-placeholder.svg'
@@ -21,62 +22,86 @@ const tileData = [
   {
     img: accountSvg,
     title: 'Account',
-    author: 'author'
+    author: 'author',
+    id: 1,
+    fileName: 'account.svg'
   },
   {
     img: imagePlaceholderSvg,
     title: 'Image Placeholder',
-    author: 'author'
+    author: 'author',
+    id: 2,
+    fileName: 'image-placeholder.svg'
   },
   {
     img: bellCurveSvg,
     title: 'Bell Curve',
-    author: 'author'
+    author: 'author',
+    id: 3,
+    fileName: 'bell-curve.svg'
   },
   {
     img: blockchainSvg,
     title: 'Blockchain',
-    author: 'author'
+    author: 'author',
+    id: 4,
+    fileName: 'blockchain.svg'
   },
   {
     img: contractSvg,
     title: 'Contract',
-    author: 'author'
+    author: 'author',
+    id: 5,
+    fileName: 'contract.svg'
   },
   {
     img: craneSvg,
     title: 'Crane',
-    author: 'author'
+    author: 'author',
+    id: 6,
+    fileName: 'crane.svg'
   },
   {
     img: dependencyGraphSvg,
     title: 'Dependency Graph',
-    author: 'author'
+    author: 'author',
+    id: 7,
+    fileName: 'dependency-graph.svg'
   },
   {
     img: detectionSvg,
     title: 'Detection',
-    author: 'author'
+    author: 'author',
+    id: 8,
+    fileName: 'detection.svg'
   },
   {
     img: lazyLoadingSvg,
     title: 'Lazy Loading',
-    author: 'author'
+    author: 'author',
+    id: 9,
+    fileName: 'lazy-loading.svg'
   },
   {
     img: loseMoneySvg,
     title: 'Lose Money',
-    author: 'author'
+    author: 'author',
+    id: 10,
+    fileName: 'lose-money.svg'
   },
   {
     img: lockSvg,
     title: 'Lock',
-    author: 'author'
+    author: 'author',
+    id: 11,
+    fileName: 'lock.svg'
   },
   {
     img: modularizationSvg,
     title: 'Modularization',
-    author: 'author'
+    author: 'author',
+    id: 12,
+    fileName: 'modularization.svg'
   }
 ]
 
@@ -99,7 +124,9 @@ class BuyView extends Component {
               subtitle={<span>by: {tile.author}</span>}
               actionIcon={
                 <IconButton>
-                  <Button color="primary">Buy</Button>
+                  <Link className="item" to={`/item?${tile.fileName}`}>
+                    <Button color="primary">Buy</Button>
+                  </Link>
                 </IconButton>
               }
             />
