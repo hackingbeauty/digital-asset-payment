@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes            from 'prop-types'
 import { withRouter }       from 'react-router-dom'
+import Button               from 'components/Button'
 import accountSvg           from 'assets/svgs/account.svg'
 import imagePlaceholderSvg  from 'assets/svgs/image-placeholder.svg'
 import bellCurveSvg         from 'assets/svgs/bell-curve.svg'
@@ -37,8 +38,8 @@ class ItemView extends Component {
     return (
       <div className={styles}>
         <div className="container">
-          <h2>Item</h2>
-          <img src={icons[`${fileName}`]} alt="icon" />
+          <img className="icon" src={icons[`${fileName}`]} alt="icon" />
+          <Button color="primary">Buy Now!</Button>
         </div>
       </div>
     )
