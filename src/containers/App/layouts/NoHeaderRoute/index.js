@@ -1,6 +1,6 @@
-import React      from 'react'
-import { Route }  from 'react-router-dom'
-import { styles } from './styles.scss'
+import React       from 'react'
+import { Route }   from 'react-router-dom'
+import { styles }  from './styles.scss'
 
 const NoHeaderRoute = ({ component: Component }) => {
   return (

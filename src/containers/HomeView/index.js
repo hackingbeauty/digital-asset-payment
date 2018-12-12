@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Paper                from '@material-ui/core/Paper'
-import { appConfig }        from 'configs/config-main'
+import iconizeLogo          from 'assets/images/iconize-logo.png'
 import { Link }             from 'react-router-dom'
 import { styles }           from './styles.scss'
 
@@ -8,7 +8,7 @@ class HomeView extends Component {
   render() {
     return (
       <div className={styles}>
-        <h1>{appConfig.name}</h1>
+        <img src={iconizeLogo} id="logo" width={300} alt="iconize log" />
         <div className="container">
           <Link to="/buy">
             <Paper elevation={1} id="buy-btn">
