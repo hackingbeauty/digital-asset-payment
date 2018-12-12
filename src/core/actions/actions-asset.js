@@ -96,22 +96,24 @@ export function checkIfRegistered(assetUrl) {
     const ProofOfExContract = contract(ProofOfExistence)
     const assetHash = sha256(assetUrl)
 
-    ProofOfExContract.setProvider(web3Provider.currentProvider)
-    ProofOfExContract.defaults({ from: web3Provider.eth.defaultAccount })
+    dispatchAssetDoesNotExist(assetHash, dispatch)
 
-    return new Promise((resolve, reject) => {
-      checkIfAssetRegistered(ProofOfExContract, assetHash, resolve, reject)
-    })
-      .then((assetExists) => {
-        if (assetExists) {
-          dispatchAssetAlreadyExists(dispatch)
-        } else {
-          dispatchAssetDoesNotExist(assetHash, dispatch)
-        }
-      })
-      .catch((error) => {
-        dispatchError(error, dispatch)
-      })
+    // ProofOfExContract.setProvider(web3Provider.currentProvider)
+    // ProofOfExContract.defaults({ from: web3Provider.eth.defaultAccount })
+
+    // return new Promise((resolve, reject) => {
+    //   checkIfAssetRegistered(ProofOfExContract, assetHash, resolve, reject)
+    // })
+    //   .then((assetExists) => {
+    //     if (assetExists) {
+    //       dispatchAssetAlreadyExists(dispatch)
+    //     } else {
+    //       dispatchAssetDoesNotExist(assetHash, dispatch)
+    //     }
+    //   })
+    //   .catch((error) => {
+    //     dispatchError(error, dispatch)
+    //   })
   }
 }
 

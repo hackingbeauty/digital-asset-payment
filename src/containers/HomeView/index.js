@@ -15,7 +15,7 @@ class HomeView extends Component {
               I WANT TO BUY
             </Paper>
           </Link>
-          <Link to="/assets">
+          <Link to="/sell">
             <Paper elevation={1} id="sell-btn">
               I WANT TO SELL
             </Paper>

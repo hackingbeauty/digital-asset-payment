@@ -37,7 +37,7 @@ class App extends Component {
         <HashRouter>
           <Switch>
             <NoHeaderRoute path="/home" component={HomeView} />
-            <SellerLayoutRoute path="/assets" component={AssetsView} />
+            <SellerLayoutRoute path="/sell" component={AssetsView} />
             <BuyerLayoutRoute path="/item" component={ItemView} />
             <BuyerLayoutRoute path="/buy" component={BuyView} />
             <SellerLayoutRoute path="/pending" component={PendingTransactionsView} />

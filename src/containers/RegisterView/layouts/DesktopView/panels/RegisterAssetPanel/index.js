@@ -46,10 +46,6 @@ class RegisterAssetPanel extends Component {
               <span>{email}</span>
             </li>
             <li>
-              <span>MetaMask ID:</span>
-              <span>{id}</span>
-            </li>
-            <li>
               <span>Unique Hash <br />of Photo:</span>
               <span>{assetHash}</span>
             </li>
