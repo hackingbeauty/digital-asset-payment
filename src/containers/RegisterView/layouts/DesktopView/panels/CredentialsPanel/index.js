@@ -5,7 +5,6 @@ import { bindActionCreators }     from 'redux'
 import { withRouter }             from 'react-router-dom'
 import { Form, Label, Input }     from 'components/Form'
 import * as accountActionCreators from 'core/actions/actions-account'
-import { requestAccountAccess }   from 'core/libs/lib-metamask-helper'
 import Controls                   from '../../components/Controls'
 import { styles }                 from './styles.scss'
 
@@ -18,14 +17,6 @@ class CredentialsPanel extends Component {
       nextBtnDisabled: true,
       id: ''
     }
-  }
-
-  componentDidMount() {
-    const { actions } = this.props
-
-    requestAccountAccess((defaultAccount) => {
-      actions.account.setDefaultAccount(defaultAccount)
-    })
   }
 
   static getDerivedStateFromProps(nextProps) {
