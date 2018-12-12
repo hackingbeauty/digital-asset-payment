@@ -12,11 +12,19 @@
   #buy-btn,
   #sell-btn {
     width: 45%;
-    display: inline-block;
     text-align: center;
     margin: 0 20px;
     height: 200px;
     font-size: 40px;
+    float: left;
+
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+
   }
 
   #buy-btn {

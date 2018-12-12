@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import GridListTile         from '@material-ui/core/GridListTile'
 import GridListTileBar      from '@material-ui/core/GridListTileBar'
 import IconButton           from '@material-ui/core/IconButton'
-import InfoIcon             from '@material-ui/icons/Info'
+import Button               from 'components/Button'
 import accountSvg           from 'assets/svgs/account.svg'
 import imagePlaceholderSvg  from 'assets/svgs/image-placeholder.svg'
 import bellCurveSvg         from 'assets/svgs/bell-curve.svg'
@@ -99,7 +99,7 @@ class BuyView extends Component {
               subtitle={<span>by: {tile.author}</span>}
               actionIcon={
                 <IconButton>
-                  <InfoIcon />
+                  <Button color="primary">Buy</Button>
                 </IconButton>
               }
             />
